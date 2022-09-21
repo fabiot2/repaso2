@@ -9,3 +9,8 @@ div figure img {
     max-width: 400px;
     max-height: auto;
 }
+
+div section video {
+    max-width: 400px;
+    max-height: auto;
+}

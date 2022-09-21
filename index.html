@@ -4,10 +4,112 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Repaso2</title>
+    <title>Aprendiendo a Manejar la Terminal de Linux</title>
 </head>
 <body>
     <H1>Test1</H1>
-    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Ipsam quasi ullam, quae labore adipisci suscipit alias error similique dicta at mollitia incidunt temporibus vel consequuntur impedit ratione nesciunt facere eveniet.</p>
+    <p>.Instalar tree: 
+tree --version: verificar version.
+sudo apt-get install tree: instalar tree
+sudo apt-get update: actualizar tree
+
+
+
+
+acceder a archivos wsl desde windows: \\wsl$
+
+cd + nombrecarpeta: cambiar directorio:
+cd .. : directorio padre
+cd / : va al root
+ls: lista de archivos y carpetas: 
+ls -l: lista de atrchivos y carpetas en bites
+ls -lh: lista de archivos y carpetas en kb
+ls -la: Lista todos archivos y carpetas incluso ocultos.
+ls -lS: ordena archivos y carpetas de mayor a menor según tamaño. 
+ls -lr: muestra los archivos en orden alfábetico de último a primero
+ls *.:comodin
+ls palabra*:
+ls palabra?: encuentra archivos con un caracter despues de la palabra
+ls palabra???: encuentra archivos con tres caracteres despues de la palabra
+ls [[:upper:]]* : encontrará un directorio que inicie con palabras en mayusculas y luego del asteristicos con la palabra.
+ls [[:lower:]]*  : encontrará un directorio que inicie con palabras en minusculas
+ls [ad]* : Encontrará carpetas que inicien con una a o una d y y siga con cualquier otro caracter
+ls -d [[:upper:]]* : sólo buscará archivos
+ls -d:
+ls -lh | less: lista los archivos como si fuera un documento,   
+pwd: regresa la ruta donde estoy
+clear: limpia consola
+control + l: limpiar consola
+cd mnt: (Desde carpeta root) para navegar en archivos de windows
+head + nombre del archivo.extension muestra el contenido del archivo -10 primeras lineas
+head + archivo.extension -n 15: muestra el contenido del archivo y sus 15 primeras lineas.
+tail + nombre del archivo.extension muestra el contenido del archivo -10 ultimas lineas
+tail + archivo.extension -n 15: muestra el contenido del archivo y sus 15 ultimas lineas.
+........................less................................
+less: Buscador de texto
+/: permite buscar palabras en less 
+q: quit
+.................................
+..........................Nautilus.........................................
+sudo apt install nautilus
+
+nautilus
+.....................................................................
+................ ayuda comandos.....................................................
+type: permite ver la naturaleza de los comandos.
+help: obtener ayuda de los comandos
+alias: alias l="ls -lh"
+info:
+man: 
+whatis
+
+.....................................................................
+mkdir + "nombre": crea una carpeta nueva
+mkdir dir1 dir2: puede crear varias carpetas al mismo tiempo
+sudo + nombre: permisos de admin
+sudo mkdir +nombre: carpeta con permisos admin
+touch : crea archivo
+touch file1 file2: puede crear varias carpetas al mismo tiempo
+tree: arbol de carpetas y archivos
+tree -L 2: Arbol de carpetas y archivos pero con un max. de dos niveles
+file: informacion de un archivo
+mv + archivo o carpeta + a dònde lo quiero mover:
+code . : installa visual studio code en ubuntu. 
+cat + nombre archivo: muestra lo que tiene ese archivo
+man: manual > man + comando > manual comando
+cd ~: 
+sudo apt-get update: descarga
+sudo apt-get upgrade: instala
+sudo apt install nodejs
+node -v: dice la versión nodejs
+sudo apt install npm 
+npx create-react-app test
+rm nombredelarachivo.extencion: borra un sólo archivo
+rm -i nombrearchivo: borrar un archivo con confirmacion
+rm -ri borrar directorio
+rm -d nombredecarpetavacia: borrar carpeta vacia
+rm -rf nombrecarpeta: borrar toda la carpeta de forma forzada.
+git --version: que version git tengo
+sudo apt-get update: actualiza git
+sudo apt install git: instalar git
+
+Crear llave SSH Github
+ssh-keygen -t rsa -b 4096 -C "email de github"
+
+Evaluar SSH
+eval "(ssh-agent -s)"
+
+Copiar ID SSH al agente: ssh-copy-id [email]
+Copiar llave publica: cd ~/.ssh 
+cat id_rsa.pub
+cat ~/.gitconfig: ver config git
+
+git config --global user.email "fabiotriana90@gmail.com"
+git config --global user.name "Fabiot2"
+
+
+git remote add origin https://github.com/TU_USUARIO/TU_REPOSITORIO.git
+git branch -M main
+git push -u origin main (aquí puede ser main o master)</p>
 </body>
 </html>

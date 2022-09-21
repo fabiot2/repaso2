@@ -76,6 +76,7 @@ file: informacion de un archivo
 mv + archivo o carpeta + a dònde lo quiero mover:
 code . : installa visual studio code en ubuntu. 
 cat + nombre archivo: muestra lo que tiene ese archivo
+Cat + nombredelarchivo.txt + nombredelarchivo.txt: mostrará la información almacenada en ambos archivos.
 man: manual > man + comando > manual comando
 cd ~: 
 sudo apt-get update: descarga
@@ -111,5 +112,18 @@ git config --global user.name "Fabiot2"
 git remote add origin https://github.com/TU_USUARIO/TU_REPOSITORIO.git
 git branch -M main
 git push -u origin main (aquí puede ser main o master)</p>
+
+......Redirecciones....................................
+ls > nombredearchivo.txt: creará o guardará la información del directorio en archivo txt, si no existe. Se creará.
+ls >> nombredelarchivo.txt: servirá para concatenar, adjuntar la información al final de lo que se creó previamente. 
+ls nombrecarpeta > nombrearchivo.txt ejecutará el comando ls para una carpeta en específico.
+less nombredelarchivo.txt mostrará la información que contiene el archivo.
+
+......Redirecciones de error en caso de hacer logs....................................
+ls directoriooarchivo 2> archivo.txt 
+
+ls directorioarchivo > archivodestino.txt 2>&1 
+esto concatenará las dos acciones o salidas del comando ls.
+
 </body>
 </html>

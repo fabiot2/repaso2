@@ -41,15 +41,9 @@ pwd: regresa la ruta donde estoy
 clear: limpia consola
 control + l: limpiar consola
 cd mnt: (Desde carpeta root) para navegar en archivos de windows
-head + nombre del archivo.extension muestra el contenido del archivo -10 primeras lineas
-head + archivo.extension -n 15: muestra el contenido del archivo y sus 15 primeras lineas.
-tail + nombre del archivo.extension muestra el contenido del archivo -10 ultimas lineas
-tail + archivo.extension -n 15: muestra el contenido del archivo y sus 15 ultimas lineas.
-........................less................................
-less: Buscador de texto
-/: permite buscar palabras en less 
-q: quit
-.................................
+
+tree: arbol de carpetas y archivos
+tree -L 2: Arbol de carpetas y archivos pero con un max. de dos niveles
 ..........................Nautilus.........................................
 sudo apt install nautilus
 
@@ -63,20 +57,35 @@ info:
 man: 
 whatis
 
-.....................................................................
+..................................................................... Comandos para explorar texto
+...............................................................
+cat + nombre archivo: muestra lo que tiene ese archivo
+Cat + nombredelarchivo.txt + nombredelarchivo.txt: mostrará la información almacenada en ambos archivos.
+.................................
+head + nombre del archivo.extension muestra el contenido del archivo -10 primeras lineas
+head + archivo.extension -n 15: muestra el contenido del archivo y sus 15 primeras lineas.
+
+.................................
+tail + nombre del archivo.extension muestra el contenido del archivo -10 ultimas lineas
+tail + archivo.extension -n 15: muestra el contenido del archivo y sus 15 ultimas lineas.
+
+
+........................less................................
+less: Buscador de texto
+/: permite buscar palabras en less 
+q: quit
+.................................
+..............................................
+
 mkdir + "nombre": crea una carpeta nueva
 mkdir dir1 dir2: puede crear varias carpetas al mismo tiempo
 sudo + nombre: permisos de admin
 sudo mkdir +nombre: carpeta con permisos admin
 touch : crea archivo
 touch file1 file2: puede crear varias carpetas al mismo tiempo
-tree: arbol de carpetas y archivos
-tree -L 2: Arbol de carpetas y archivos pero con un max. de dos niveles
 file: informacion de un archivo
 mv + archivo o carpeta + a dònde lo quiero mover:
 code . : installa visual studio code en ubuntu. 
-cat + nombre archivo: muestra lo que tiene ese archivo
-Cat + nombredelarchivo.txt + nombredelarchivo.txt: mostrará la información almacenada en ambos archivos.
 man: manual > man + comando > manual comando
 cd ~: 
 sudo apt-get update: descarga
@@ -124,6 +133,50 @@ ls directoriooarchivo 2> archivo.txt
 
 ls directorioarchivo > archivodestino.txt 2>&1 
 esto concatenará las dos acciones o salidas del comando ls.
+
+....................Pipe Operator..........................
+..............................................
+Permitirá convertir un standar output se convierta en standar input de otro comando 
+ejemplo: para ver la información sin guardar.
+
+ls -lh directorio | less
+
+ls -lh repaso2 | tee output.txt | less : tee nos permitirá trabajar como less.
+..............................................
+
+....................cowsay.........................
+
+sudo apt install cowsay
+..............................................
+
+....................lolcat.........................
+
+sudo apt install lolcat
+..............................................
+
+
+....................Comandos sincrónicos............
+Ejecutar comandos de forma ordenada, 1 a 1.
+
+Se utiliza ; por cada comando
+..............................................
+
+....................Comandos Asincrónicos............
+Por cada comando que se ejecute se abrirá una shell o lina de comandos, utilizará un hilo de procesador por cada comando ejecutado.
+
+Se utiliza & por cada comando
+
+Ejemplo: ls & date & cal
+..............................................
+
+....................Comandos De manera condicional............
+Si se cumple ejecutará el siguiente.
+
+Se utiliza && por cada comando
+
+Ejemplo: mkdir test && cd test
+..............................................
+</body>
 
 </body>
 </html>

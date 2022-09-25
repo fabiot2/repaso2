@@ -189,7 +189,11 @@ Ejemplo: cd 12312312 || echo "segundo comando"
 d directorio
 l link simbólico
 b archivo de bloque especial, manejan información de los bloques de datos.
-.......................Tipo de modo............
+..................Tipo de permiso............
+r = read
+w = write
+x = execute
+..................Tipo de modo............
 Dueño RWX 111
 Grupo R-x 101
 World R-x 101
@@ -198,14 +202,43 @@ u solo para usuario
 g solo para Grupo
 o solopara otros world
 a aplica para todos
-.......................Cambiar permisos Terminal...........
-chmod
+
+.......................Modo Binario............
+0 = 0 0 0
+2 = 0 0 1
+5 = 0 1 1
+7 = 1 1 1
+......................Cambiar permisos Terminal...........
+chmod Usuario, Grupo, Global 
+
+chmod + código + nombredearchivo
+
+chmod modosimbólico + para quitar  '-'  + tipo de permiso + nombrearchivo/carpeta 
+                      para agregar '+'    
+Ejemplo: chmod u-r texto.txt
+
 .......................Usuarios...........
 whoami. para saber quien soy en la terminal
 id: para ver id
 su: cambiar de usuario.
 sudo su root: forzar cambio de usuario a root.
-psswd: cambiar password
+sudo: permite tomar persmisos como si fueramos usuario root.
+passwd: cambiar password
+
+.......................Links Simbolicos...........
+
+
+
+.......................Variables de entorno...........
+printenv: nos muestra todas las variables de entorno configuradas.
+
+Podemos utilizar las variables de entorno para agilizar trabajo?
+ejemplo, una forma de ir al Home sin estar escribiendo la ruta completa sería. 
+
+cd $HOME
+
+echo $PATH: Muestra todas las rutas donde se encuentran los binarios que ejecuta nuestro sistema.
+
 </body>
 
 </body>

@@ -3,17 +3,34 @@ Git es un sistema de control de versiones distribuido.
 Antes de instalar Git, se recomienda actualizar paquetes de linux, para eso se utiliza.
 sudo apt-get update: como admin temporalmente, se actualizará.
 sudo apt-get install git : instalará git.
+................Configuración git......................
+git config: muestra toda la configuracion.
+git config --list: configuracion por defecto de mi git.
+git config --list --show-origin: visualizar donde están las configuraciones guardadas.
+git config --global: cambiar la configuracion global.
+git config --global user.name "newname": cambiar la configuracion del usuario de git.
+git config --global user.email "nuevo correo" : cambia configuracion de correo git.
+
+
 
 git init: permite iniciar un proyecto git.
 git add documentotextoplano.txt: agregar el archivo a la base de datos.
+.......Esto provoca pasar el archivo a un estado STAGED..........
 git add .: agrega todos los archivos que hayan cambiado, en el directorio actual a la base de datos.
+
+......visualizar estado del archivo e interacciones...........
 git status: ver el estado de la base de datos, si se hicieron cambios y no se ha guardad
 o ahí saldrá.
+git rm nombredelarchivo.txt:
 git rm --cached nombrearchivo.txt: excluirá el archivo del comando add y forzara stado nuevo.
 
 git show: mostrará todos los cambios que se hayan hecho. cuando y quien los hizo.
 para salir de git show, presionar tecla q.
 git log archivo.txt: para visualizar la historia completa de un archivo.
+.......Git commit..........
+git commit: sirve para enviar los cambios al repositorio.
+git commit -m "comentario de lo que estas cambiando en el archivo": es la mejor practica, pues la idea es identificar los cambios en el tiempo y realizar posibles correcciones futuras.
+-----------------------------------------------------------
 git push: enviar las modificasiones que hiciste a un servidor remoto.
 git pull: traer la informacion de un servidor remoto.
 

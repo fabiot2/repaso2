@@ -1,0 +1,7 @@
+git init: permite iniciar un proyecto git.
+git add documentotextoplano.txt: agregar el archivo a la base de datos.
+git add .: agrega todos los archivos que hayan cambiado, en el directorio actual a la base de datos.
+git status: ver el estado de la base de datos, si se hicieron cambios y no se ha guardad
+o ahí saldrá.
+git show: mostrará todos los cambios que se hayan hecho. cuando y quien los hizo.
+para salir de git show, presionar tecla q~                

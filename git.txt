@@ -1,8 +1,16 @@
+Git es un sistema de control de versiones distribuido.
+
+Antes de instalar Git, se recomienda actualizar paquetes de linux, para eso se utiliza.
+sudo apt-get update: como admin temporalmente, se actualizará.
+sudo apt-get install git : instalará git.
+
 git init: permite iniciar un proyecto git.
 git add documentotextoplano.txt: agregar el archivo a la base de datos.
 git add .: agrega todos los archivos que hayan cambiado, en el directorio actual a la base de datos.
 git status: ver el estado de la base de datos, si se hicieron cambios y no se ha guardad
 o ahí saldrá.
+git rm --cached nombrearchivo.txt: excluirá el archivo del comando add y forzara stado nuevo.
+
 git show: mostrará todos los cambios que se hayan hecho. cuando y quien los hizo.
 para salir de git show, presionar tecla q.
 git log archivo.txt: para visualizar la historia completa de un archivo.

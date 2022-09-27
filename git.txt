@@ -4,4 +4,8 @@ git add .: agrega todos los archivos que hayan cambiado, en el directorio actual
 git status: ver el estado de la base de datos, si se hicieron cambios y no se ha guardad
 o ahí saldrá.
 git show: mostrará todos los cambios que se hayan hecho. cuando y quien los hizo.
-para salir de git show, presionar tecla q~                
+para salir de git show, presionar tecla q.
+git log archivo.txt: para visualizar la historia completa de un archivo.
+git push: enviar las modificasiones que hiciste a un servidor remoto.
+git pull: traer la informacion de un servidor remoto.
+

@@ -10,7 +10,7 @@ git config --list --show-origin: visualizar donde están las configuraciones gua
 git config --global: cambiar la configuracion global.
 git config --global user.name "newname": cambiar la configuracion del usuario de git.
 git config --global user.email "nuevo correo" : cambia configuracion de correo git.
-
+git remote set-url origin new.git.url/here
 
 
 git init: permite iniciar un proyecto git.

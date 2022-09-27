@@ -237,7 +237,91 @@ ejemplo, una forma de ir al Home sin estar escribiendo la ruta completa sería.
 
 cd $HOME
 
-echo $PATH: Muestra todas las rutas donde se encuentran los binarios que ejecuta nuestro sistema.
+echo $PATH: Muestra todas las rutas donde se encuentran los binarios que ejecuta nuestro sistema - es muy importante.
+
+modificar variables de entorno, ir al home, luego.
+ls -la: 
+Identificar .bashrc allí se mantienen las configuraciones bash en linux. para mac se busca .zshr
+
+Desde terminal de ubuntu, ejecutar. code .bashrc
+
+Puedo modificar o crear alias,
+
+Se guarda, y siemprem que se desee ver cambios, deberá ejecutarse el comando bash para recargar el archivo.
+PATH=$PATH:/home/dxtrs/platzi2/repaso2/bin
+.......................Comandos de Búsqueda...........
+which: ayuda a encontrar la ruta de nuestros binarios
+find ./ -type d: permite encontrar un archivo, primero se pone en una ruta y luego. 
+whereis:
+find ./ file */.html
+find ./ -type d -name nombredirectorio: buscará directorios
+find ./ -type f -name nombrearchivo: buscará archivos
+find ./ -type f -name *.logs: encontrará los logs
+find ./ -size 20M: encontrará archivos mayores a 20mb
+.......................Grep...........
+Permite encontrar coincidencias de busqueda dentro de cualqueir archivo de texto. 
+
+grep -c the movies.csv.csv: Saber cuantas ocurrencias hay de X palabra dentro de mis archivos.
+grep -c the movies.csv.csv: ignorar las mayuscuas.
+grep -v towers movies.csv.csv encontrará todo lo que no coincida.
+
+i: ignore text sensitive.
+grep -i texto archivo.extencion
+tambien puedo crear redirección y guardar el output en un archivo de texto.
+.....................world count...........
+wc: contar cuantas palabras hay en un documento.
+9126 30006 477779 movies.csv.csv
+Cuantas lineas tiene el archivo, cuantas letras en general, el número de bits y el nombre del archivo.
+
+wc -l movies.csv.csv: permitirá contar el número  total de lineas.
+
+wc -w movies.csv.csv: cuantas palabras.
+
+wc -c movies.csv.csv: cuantos bits.
+....................Utilidades de red...........
+En algunas distribuciones de linux no tenemos instalados las herramientas de red, por lo que con el comando. 
+sudo apt install net-tools.
+
+alternativamente podríamos utilizar comandos ip address o ip a 
+para visualizar la ip.
+
+sudo apt install inetutils-traceroute:
+para instalar tool de traceroute
+
+ifconfig: configuracion de nuestra red.
+
+ping direccion pagina web: hacer ping
+curl: traer un archivo de manera de texto atravez de la red
+wget: descarga desde la web
+netstat -i: información de nuestros dispositivos de red.
+...................Comprimir archivos...........
+tar -cvf Tocompress.tar compress: tar formato, -c comprimir, visualizar en terminal, nombre del archivo.tar, carpeta destino.
+tar tvf archivo.tar: visualizar contenido de un archivo comprimido.
+tar -cvzf Tocompress.gz compress: variacion utilizando Gzip para texto plano.
+tar -xzvf compress.gz: descomprimir gz.
+zip -r archivo.zip carpeta: comprime en formato zip.
+unzip nombrearchivo.zip: descomprime archivos zip.
+...................Matar procesos...........
+ps: comandos o procesos que estan corriendo actualmente, cada procesos tinee un id representando con PID.
+kill pid: matará un proceso.
+top: procesos que estan utilizando más recursos.
+htop: evolución de top.
+jobs: para consultar todos los comandos que tenemos en el background.
+fg: para traer al foreground el proceso.
+bg: lo llevará al background.
+..................vim...........
+vim: editor de texto.
+presionar tecla I para entrar en modo insert, una vez finalizado precionar tecla esc.
+presiona / para buscar
+para eliminar, selecciona la linea y presiona dos veces tecla 1, o tecla D si es desde visual studio code.
+:w : guardar
+:wq : guardar y salir
+:wq! : forzar salida
+..................Personalizar la terminal...........
+sudo apt-get install tilix
+sudo apt-get install zsh
+
+chsh -s $(which zsh): cambiar shell.
 
 </body>
 
